@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-04_151123",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop com.example.splapp"
+  },
+  "start_state": "78a5f46b837e74420db4a39c8a04fcb5",
+  "stop_state": "78a5f46b837e74420db4a39c8a04fcb5",
+  "event_str": "KillAppEvent()"
+}

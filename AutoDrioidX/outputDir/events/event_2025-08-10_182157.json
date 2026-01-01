@@ -1,0 +1,58 @@
+{
+  "tag": "2025-08-10_182157",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1052
+        ],
+        [
+          1036,
+          1175
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/etPassword",
+      "checked": false,
+      "text": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 5,
+      "temp_id": 8,
+      "size": "992*123",
+      "signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etPassword[text]\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022[enabled,,]",
+      "view_str": "774931a4c9d6e36f1f92943b2cea5ad1",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etPassword",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input bound_box=44,1052,1036,1175>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022</input>"
+    },
+    "text": ""
+  },
+  "start_state": "416c43fbe1538f7cb32470f46de4f2a7",
+  "stop_state": "416c43fbe1538f7cb32470f46de4f2a7",
+  "event_str": "CustomSetTextEvent(state=416c43fbe1538f7cb32470f46de4f2a7, view=774931a4c9d6e36f1f92943b2cea5ad1(Login/EditText-\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022), text=)"
+}

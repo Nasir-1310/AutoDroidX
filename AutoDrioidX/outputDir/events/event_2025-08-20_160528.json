@@ -1,0 +1,58 @@
+{
+  "tag": "2025-08-20_160528",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1203
+        ],
+        [
+          1036,
+          1326
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/etUsername",
+      "checked": false,
+      "text": "Enter your username",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 5,
+      "temp_id": 9,
+      "size": "992*123",
+      "signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername[text]Enter your username[enabled,,]",
+      "view_str": "3b09d52c87165da085e224dd3d195724",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=44,1203,1036,1326>Enter your username</input>"
+    },
+    "text": ""
+  },
+  "start_state": "354c62b59758edf82c7f4ece92e39342",
+  "stop_state": "ebdaabdbcaa74f9d62a35997df1d89ee",
+  "event_str": "CustomSetTextEvent(state=354c62b59758edf82c7f4ece92e39342, view=3b09d52c87165da085e224dd3d195724(Login/EditText-Enter your), text=)"
+}

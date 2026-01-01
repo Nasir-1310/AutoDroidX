@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-02_133626",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop ridmik.keyboard.classic"
+  },
+  "start_state": "ed789748fa0d2910d4e579f228c68d37",
+  "stop_state": "ed789748fa0d2910d4e579f228c68d37",
+  "event_str": "KillAppEvent()"
+}

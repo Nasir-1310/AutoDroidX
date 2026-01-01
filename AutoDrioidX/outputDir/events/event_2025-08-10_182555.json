@@ -1,0 +1,58 @@
+{
+  "tag": "2025-08-10_182555",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          44,
+          901
+        ],
+        [
+          1036,
+          1024
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/etEmail",
+      "checked": false,
+      "text": "saimonbhuiyan@yahoo.com",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 5,
+      "temp_id": 7,
+      "size": "992*123",
+      "signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etEmail[text]saimonbhuiyan@yahoo.com[enabled,,]",
+      "view_str": "88950e4150d6a885cf3b8011240f256d",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etEmail",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<input bound_box=44,901,1036,1024>saimonbhuiyan@yahoo.com</input>"
+    },
+    "text": ""
+  },
+  "start_state": "027e1f20f42bf1536062ccb427fa07f5",
+  "stop_state": "027e1f20f42bf1536062ccb427fa07f5",
+  "event_str": "CustomSetTextEvent(state=027e1f20f42bf1536062ccb427fa07f5, view=88950e4150d6a885cf3b8011240f256d(Login/EditText-saimonbhui), text=)"
+}

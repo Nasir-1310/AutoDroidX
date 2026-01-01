@@ -1,0 +1,907 @@
+{
+  "tag": "2025-08-02_133641",
+  "state_str": "8781ef9161752605bf8bad95da1de2a8",
+  "state_str_content_free": "7b7563f452cd623f5a256fd9fc49b1d8",
+  "foreground_activity": "ridmik.keyboard.classic/setup.SetupWizardActivity",
+  "activity_stack": [
+    "ridmik.keyboard.classic/setup.SetupWizardActivity"
+  ],
+  "background_services": [
+    "com.google.android.networkstack.tethering/com.android.networkstack.tethering.TetheringService",
+    "com.google.android.gms/.icing.service.AppIndexingService",
+    "com.google.android.gms/.deviceconnection.service.DeviceConnectionWatcherService",
+    "com.android.systemui/.keyguard.KeyguardService",
+    "com.google.android.gms/.measurement.service.MeasurementBrokerService",
+    "com.android.bluetooth/.btservice.AdapterService",
+    "com.android.systemui/.ImageWallpaper",
+    "com.google.android.gms/com.google.android.location.geocode.GeocodeService",
+    "com.google.android.gms/.auth.setup.devicesignals.LockScreenService",
+    "com.google.android.gms/.gcm.GcmService",
+    "com.google.android.gms/.auth.proximity.firstparty.SystemMemoryCacheService",
+    "com.google.android.gms/.clearcut.debug.ClearcutDebugDumpService",
+    "com.android.phone/com.android.internal.telephony.CellularNetworkService",
+    "com.google.android.gms/com.google.location.nearby.direct.service.NearbyDirectService",
+    "com.google.android.gms/.chimera.PersistentBoundBrokerService",
+    "com.android.bluetooth/.gatt.GattService",
+    "com.google.android.gms/.chimera.GmsBoundBrokerService",
+    "com.google.android.gms/.tron.CollectionService",
+    "com.google.android.gms/.fido.fido2.pollux.CableAuthenticatorService",
+    "com.google.android.googlequicksearchbox/com.google.android.apps.gsa.nowoverlayservice.DrawerOverlayService",
+    "io.github.ylimit.droidbotapp/.DroidBotIME",
+    "com.android.bluetooth/.pbap.BluetoothPbapService",
+    "com.google.android.gms/.beacon.BleService",
+    "com.google.android.gms/com.google.android.location.fused.FusedLocationService",
+    "com.google.android.inputmethod.latin/com.google.android.libraries.micore.training.cache.service.TrainingCacheManagerService",
+    "com.google.android.gms/.gcm.nts.SchedulerService",
+    "com.google.android.ext.services/android.ext.services.autofill.InlineSuggestionRenderServiceImpl",
+    "com.android.bluetooth/.a2dp.A2dpService",
+    "com.google.android.providers.media.module/com.android.providers.media.fuse.ExternalStorageServiceImpl",
+    "io.github.ylimit.droidbotapp/io.github.privacystreams.accessibility.PSAccessibilityService",
+    "com.google.android.gms/com.google.android.location.geofencer.service.GeofenceProviderService",
+    "com.google.android.gms/.thunderbird.EmergencyPersistentService",
+    "com.google.android.apps.nexuslauncher/com.android.launcher3.notification.NotificationListener",
+    "com.android.systemui/.SystemUIService",
+    "android/.hardware.location.GeofenceHardwareService",
+    "com.android.se/.SecureElementService",
+    "com.google.android.ims/.services.RcsService",
+    "com.google.android.gms/.chimera.PersistentDirectBootAwareApiService",
+    "com.android.bluetooth/.hid.HidDeviceService",
+    "com.google.android.ext.services/android.ext.services.notification.Assistant",
+    "ridmik.keyboard.classic/setup.RidmikFirebaseMessagingService",
+    "com.google.android.gms/.location.persistent.LocationPersistentService",
+    "com.google.android.gms/.nearby.discovery.service.DiscoveryService",
+    "com.google.android.gms/com.google.android.location.internal.PendingIntentCallbackService",
+    "com.google.android.gms/.nearby.messages.service.NearbyMessagesService",
+    "com.android.server.telecom/.components.BluetoothPhoneService",
+    "com.google.android.gms/com.google.android.location.internal.server.GoogleLocationService",
+    "com.google.android.gms/com.google.android.contextmanager.service.ContextManagerService",
+    "com.android.systemui/.dump.SystemUIAuxiliaryDumpService",
+    "com.google.android.gms/com.google.android.location.network.NetworkLocationService",
+    "com.android.stk/.StkAppService",
+    "com.google.android.gms/com.google.android.location.internal.GoogleLocationManagerService",
+    "com.android.phone/com.android.internal.telephony.dataconnection.CellularDataService",
+    "com.android.service.ims/.RcsService",
+    "com.android.server.telecom/.components.TelecomService",
+    "com.google.android.networkstack/com.android.server.NetworkStackService",
+    "com.android.bluetooth/.hfp.HeadsetService",
+    "com.google.android.googlequicksearchbox/com.google.android.voiceinteraction.GsaVoiceInteractionService",
+    "com.android.emulator.multidisplay/.MultiDisplayService",
+    "com.android.phone/.vvm.RemoteVvmTaskManager",
+    "com.google.android.gms/.lockbox.service.LockboxBrokerService",
+    "com.android.ons/.OpportunisticNetworkService",
+    "com.google.android.apps.messaging/.shared.datamodel.action.execution.ActionExecutorImpl",
+    "com.google.android.gms/.common.stats.GmsCoreStatsService",
+    "com.google.android.gms/com.google.android.location.internal.server.HardwareArProviderService",
+    "com.android.bluetooth/.map.BluetoothMapService",
+    "com.android.phone/com.android.services.telephony.sip.components.TelephonySipService",
+    "com.google.android.gms/.config.ConfigService",
+    "ridmik.keyboard.classic/com.google.firebase.iid.FirebaseInstanceIdService",
+    "com.android.phone/.TelephonyDebugService",
+    "com.android.bluetooth/.hid.HidHostService",
+    "com.google.android.gms/.icing.service.IndexService",
+    "com.android.bluetooth/.opp.BluetoothOppService",
+    "com.android.bluetooth/.pan.PanService",
+    "com.android.bluetooth/.avrcp.AvrcpTargetService",
+    "com.google.android.apps.nexuslauncher/com.android.quickstep.TouchInteractionService",
+    "com.google.android.cellbroadcastservice/com.android.cellbroadcastservice.DefaultCellBroadcastService"
+  ],
+  "width": 1080,
+  "height": 2340,
+  "views": [
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 3,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        1,
+        18,
+        19
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2340
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": -1,
+      "temp_id": 0,
+      "size": "1080*2340",
+      "signature": "[class]android.widget.FrameLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "6f4a07c40ed802908fd097e4207736cd",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]None"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        2
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          2208
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 1,
+      "size": "1080*2208",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "cb06a9b11fb053c98be54194a5ebd1bc",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        3
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          145
+        ],
+        [
+          1080,
+          2208
+        ]
+      ],
+      "resource_id": "android:id/content",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 1,
+      "temp_id": 2,
+      "size": "1080*2063",
+      "signature": "[class]android.widget.FrameLayout[resource_id]android:id/content[text]None[enabled,,]",
+      "view_str": "6f82bc8ef27d4440f6ed32cd91c6c977",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]android:id/content"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        4
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          145
+        ],
+        [
+          1080,
+          2208
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/setup_wizard",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 2,
+      "temp_id": 3,
+      "size": "1080*2063",
+      "signature": "[class]android.widget.FrameLayout[resource_id]ridmik.keyboard.classic:id/setup_wizard[text]None[enabled,,]",
+      "view_str": "c0af24ba7f61558c3196939739919564",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]ridmik.keyboard.classic:id/setup_wizard"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          167
+        ],
+        [
+          1036,
+          2186
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/setup_welcome_screen",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 3,
+      "temp_id": 4,
+      "size": "992*2019",
+      "signature": "[class]android.widget.LinearLayout[resource_id]ridmik.keyboard.classic:id/setup_welcome_screen[text]None[enabled,,]",
+      "view_str": "c068d58f1cb02885ebca44a8035be347",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]ridmik.keyboard.classic:id/setup_welcome_screen"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          167
+        ],
+        [
+          1036,
+          497
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/setup_welcome_title",
+      "checked": false,
+      "text": "Welcome to Ridmik Keyboard",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 5,
+      "size": "992*330",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/setup_welcome_title[text]Welcome to Ridmik Keyboard[enabled,,]",
+      "view_str": "bbcc6ec5a55544ca00b2c1b3b9ca0312",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/setup_welcome_title",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=44,167,1036,497>Welcome to Ridmik Keyboard</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          552
+        ],
+        [
+          1036,
+          619
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/but_first_text",
+      "checked": false,
+      "text": "But first...",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 6,
+      "size": "992*67",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/but_first_text[text]But first...[enabled,,]",
+      "view_str": "7b4c325bc1638309ae881eb4d43cb106",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/but_first_text",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<p bound_box=44,552,1036,619>But first...</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          636
+        ],
+        [
+          1036,
+          754
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/welcome_instruction_text",
+      "checked": false,
+      "text": "You need to enable Ridmik Keyboard in system settings and make it the active keyboard!",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 7,
+      "size": "992*118",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/welcome_instruction_text[text]None[enabled,,]",
+      "view_str": "1729f266ccd41d93fad36a4b84a4514c",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/welcome_instruction_text",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<p bound_box=44,636,1036,754>You need to enable Ridmik Keyboard in system settings and make it the active keyboard!</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 2,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        9,
+        10
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          892
+        ],
+        [
+          1036,
+          1024
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 8,
+      "size": "992*132",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "95aaef29a003b6e646a4c147acddcb42",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          892
+        ],
+        [
+          970,
+          1024
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/setup_start_label",
+      "checked": false,
+      "text": "Setup and Get started",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "926*132",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/setup_start_label[text]Setup and Get started[enabled,,]",
+      "view_str": "9b33fc10523753da83799225c9a9d006",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/setup_start_label",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<button bound_box=44,892,970,1024>Setup and Get started</button>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          970,
+          892
+        ],
+        [
+          1036,
+          1024
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/setup_start_indicator",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 10,
+      "size": "66*132",
+      "signature": "[class]android.view.View[resource_id]ridmik.keyboard.classic:id/setup_start_indicator[text]None[enabled,,]",
+      "view_str": "d24fc5c72d45b052ce8451018a8e9652",
+      "content_free_signature": "[class]android.view.View[resource_id]ridmik.keyboard.classic:id/setup_start_indicator"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1294
+        ],
+        [
+          1036,
+          2186
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.LinearLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 4,
+      "temp_id": 11,
+      "size": "992*892",
+      "signature": "[class]android.widget.LinearLayout[resource_id]None[text]None[enabled,,]",
+      "view_str": "d41d550b01b5855bad928fea75c2eab8",
+      "content_free_signature": "[class]android.widget.LinearLayout[resource_id]None"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 5,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          160,
+          1789
+        ],
+        [
+          920,
+          1965
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/logo_root",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.RelativeLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "760*176",
+      "signature": "[class]android.widget.RelativeLayout[resource_id]ridmik.keyboard.classic:id/logo_root[text]None[enabled,,]",
+      "view_str": "0b561db64c85e192382eb4fdee6877cd",
+      "content_free_signature": "[class]android.widget.RelativeLayout[resource_id]ridmik.keyboard.classic:id/logo_root"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          160,
+          1789
+        ],
+        [
+          336,
+          1965
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/ridmikLogo",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 13,
+      "size": "176*176",
+      "signature": "[class]android.widget.ImageView[resource_id]ridmik.keyboard.classic:id/ridmikLogo[text]None[enabled,,]",
+      "view_str": "d16a8cfb7d5d6628c21c073d00956e94",
+      "content_free_signature": "[class]android.widget.ImageView[resource_id]ridmik.keyboard.classic:id/ridmikLogo"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          364,
+          1789
+        ],
+        [
+          920,
+          1842
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/ridmikTitle",
+      "checked": false,
+      "text": "Ridmik Classic Keyboard",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 14,
+      "size": "556*53",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/ridmikTitle[text]Ridmik Classic Keyboard[enabled,,]",
+      "view_str": "4d163e755b1e7628ebbfeaec6b54f6f7",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/ridmikTitle",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<p bound_box=364,1789,920,1842>Ridmik Classic Keyboard</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          364,
+          1853
+        ],
+        [
+          496,
+          1906
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/version_text",
+      "checked": false,
+      "text": "Version",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 15,
+      "size": "132*53",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/version_text[text]Version[enabled,,]",
+      "view_str": "41b2015b4cd66adb1692927bfbce5c1f",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/version_text",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<p bound_box=364,1853,496,1906>Version</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          510,
+          1853
+        ],
+        [
+          598,
+          1906
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/version",
+      "checked": false,
+      "text": "4.7.0",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 16,
+      "size": "88*53",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/version[text]4.7.0[enabled,,]",
+      "view_str": "4d15e9ac965fca4eeddab4074b4e5ffe",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/version",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<p bound_box=510,1853,598,1906>4.7.0</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          612,
+          1853
+        ],
+        [
+          764,
+          1906
+        ]
+      ],
+      "resource_id": "ridmik.keyboard.classic:id/classic",
+      "checked": false,
+      "text": "Classic",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 12,
+      "temp_id": 17,
+      "size": "152*53",
+      "signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/classic[text]Classic[enabled,,]",
+      "view_str": "318f496043ebdf41e5d423a36f17ce44",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]ridmik.keyboard.classic:id/classic",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "7",
+      "desc": "<p bound_box=612,1853,764,1906>Classic</p>"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          0
+        ],
+        [
+          1080,
+          145
+        ]
+      ],
+      "resource_id": "android:id/statusBarBackground",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 18,
+      "size": "1080*145",
+      "signature": "[class]android.view.View[resource_id]android:id/statusBarBackground[text]None[enabled,,]",
+      "view_str": "6730640bb73b151b7c484ea1d4fd9dfd",
+      "content_free_signature": "[class]android.view.View[resource_id]android:id/statusBarBackground"
+    },
+    {
+      "package": "ridmik.keyboard.classic",
+      "visible": false,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          2208
+        ],
+        [
+          1080,
+          2340
+        ]
+      ],
+      "resource_id": "android:id/navigationBarBackground",
+      "checked": false,
+      "text": null,
+      "class": "android.view.View",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 0,
+      "temp_id": 19,
+      "size": "1080*132",
+      "signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground[text]None[enabled,,]",
+      "view_str": "62e28437f44897127cd2a25d284ec2d9",
+      "content_free_signature": "[class]android.view.View[resource_id]android:id/navigationBarBackground"
+    }
+  ]
+}

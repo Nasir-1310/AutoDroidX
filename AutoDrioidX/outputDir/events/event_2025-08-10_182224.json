@@ -1,0 +1,55 @@
+{
+  "tag": "2025-08-10_182224",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": false,
+      "is_password": false,
+      "focusable": false,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          457,
+          769
+        ],
+        [
+          623,
+          857
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/tvLogin",
+      "checked": false,
+      "text": "Login",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 6,
+      "size": "166*88",
+      "signature": "[class]android.widget.TextView[resource_id]com.example.splapp:id/tvLogin[text]Login[enabled,,]",
+      "view_str": "0bcb9647149a2b3bd6bf34bcc2e7a631",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.example.splapp:id/tvLogin",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<p bound_box=457,769,623,857>Login</p>"
+    }
+  },
+  "start_state": "0eccd8031d2514825e90c243ec6be431",
+  "stop_state": "0eccd8031d2514825e90c243ec6be431",
+  "event_str": "CustomTouchEvent(state=0eccd8031d2514825e90c243ec6be431, view=0bcb9647149a2b3bd6bf34bcc2e7a631(Login/TextView-Login))"
+}

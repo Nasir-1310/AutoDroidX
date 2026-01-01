@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-04_152013",
+  "event": {
+    "event_type": "key",
+    "log_lines": null,
+    "name": "BACK"
+  },
+  "start_state": "1dd81d81fb318ff2f55cbbee27c772cb",
+  "stop_state": "1dd81d81fb318ff2f55cbbee27c772cb",
+  "event_str": "KeyEvent(state=1dd81d81fb318ff2f55cbbee27c772cb, name=BACK)"
+}

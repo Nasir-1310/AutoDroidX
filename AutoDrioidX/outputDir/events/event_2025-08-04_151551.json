@@ -1,0 +1,58 @@
+{
+  "tag": "2025-08-04_151551",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1203
+        ],
+        [
+          1036,
+          1326
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/etUsername",
+      "checked": false,
+      "text": "saimon1",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 5,
+      "temp_id": 9,
+      "size": "992*123",
+      "signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername[text]saimon1[enabled,,]",
+      "view_str": "99dd6f9e3eb647f8b1a91837cce70080",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=44,1203,1036,1326>saimon1</input>"
+    },
+    "text": ""
+  },
+  "start_state": "29ac49588bc4ad0b1cecc6feb1a9753b",
+  "stop_state": "29ac49588bc4ad0b1cecc6feb1a9753b",
+  "event_str": "CustomSetTextEvent(state=29ac49588bc4ad0b1cecc6feb1a9753b, view=99dd6f9e3eb647f8b1a91837cce70080(Login/EditText-saimon1), text=)"
+}

@@ -1,0 +1,55 @@
+{
+  "tag": "2025-08-04_152252",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          220,
+          1530
+        ],
+        [
+          860,
+          1583
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/tvRegister",
+      "checked": false,
+      "text": "Don't have an account? Register here",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 11,
+      "size": "640*53",
+      "signature": "[class]android.widget.TextView[resource_id]com.example.splapp:id/tvRegister[text]Don't have an account? Register here[enabled,,]",
+      "view_str": "0e51bb8555540dbada7e43d6bf2645fc",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.example.splapp:id/tvRegister",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "5",
+      "desc": "<button bound_box=220,1530,860,1583>Don't have an account? Register here</button>"
+    }
+  },
+  "start_state": "278fa7f19e84a3680409f126555f17fe",
+  "stop_state": "278fa7f19e84a3680409f126555f17fe",
+  "event_str": "CustomTouchEvent(state=278fa7f19e84a3680409f126555f17fe, view=0e51bb8555540dbada7e43d6bf2645fc(Login/TextView-Don't have))"
+}

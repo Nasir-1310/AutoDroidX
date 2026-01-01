@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-10_183229",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am force-stop com.example.splapp"
+  },
+  "start_state": "71a6b190900033aa87756465f107fd84",
+  "stop_state": "92998493c17893cf314490a534cb0c0e",
+  "event_str": "IntentEvent(intent='am force-stop com.example.splapp')"
+}

@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-20_160651",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start com.example.splapp/com.example.splapp.MainActivity"
+  },
+  "start_state": "c16d31ec9088d3f4b87ac0259f631d6d",
+  "stop_state": "956ff0b2bf818cf25597f0228304683a",
+  "event_str": "IntentEvent(intent='am start com.example.splapp/com.example.splapp.MainActivity')"
+}

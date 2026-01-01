@@ -1,0 +1,191 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      net.hasnath.android.habijabi.WebViewActivity:
+        6c3be4d ridmik.keyboard.classic/net.hasnath.android.extra.WebViewActivity filter 1e1ad02
+          Action: "net.hasnath.android.habijabi.WebViewActivity"
+          Category: "android.intent.category.DEFAULT"
+      android.intent.action.MAIN:
+        83d20d9 ridmik.keyboard.classic/setup.MainActivity filter 2df4a9e
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        603197f ridmik.keyboard.classic/setup.SetupWizardActivity filter 850bd4c
+          Action: "android.intent.action.MAIN"
+        8d5f195 ridmik.keyboard.classic/net.hasnath.android.keyboard.LatinIMESettings filter f172aa
+          Action: "android.intent.action.MAIN"
+        139ce9b ridmik.keyboard.classic/net.hasnath.android.keyboard.LatinIMESettingsKeyboardHeight filter 9726238
+          Action: "android.intent.action.MAIN"
+          Action: "net.hasnath.android.keyboard.KEY_HEIGHT_PREF"
+          Category: "android.intent.category.DEFAULT"
+        ef11211 ridmik.keyboard.classic/net.hasnath.android.keyboard.LatinIMEDebugSettings filter a4c0f76
+          Action: "android.intent.action.MAIN"
+      ridmik.keyboard.classic.ThemeChooserActivity:
+        1597613 ridmik.keyboard.classic/setup.ThemeChooserActivity filter ac34050
+          Action: "ridmik.keyboard.classic.ThemeChooserActivity"
+          Category: "android.intent.category.DEFAULT"
+      net.hasnath.android.keyboard.AboutActivity:
+        a5cb977 ridmik.keyboard.classic/net.hasnath.android.keyboard.AboutActivity filter 30769e4
+          Action: "net.hasnath.android.keyboard.AboutActivity"
+          Category: "android.intent.category.DEFAULT"
+      net.hasnath.android.keyboard.KEY_HEIGHT_PREF:
+        139ce9b ridmik.keyboard.classic/net.hasnath.android.keyboard.LatinIMESettingsKeyboardHeight filter 9726238
+          Action: "android.intent.action.MAIN"
+          Action: "net.hasnath.android.keyboard.KEY_HEIGHT_PREF"
+          Category: "android.intent.category.DEFAULT"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.android.vending.INSTALL_REFERRER:
+        9af249 ridmik.keyboard.classic/com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver filter 541974e
+          Action: "com.android.vending.INSTALL_REFERRER"
+      com.google.android.c2dm.intent.RECEIVE:
+        d5b606f ridmik.keyboard.classic/com.google.firebase.iid.FirebaseInstanceIdReceiver filter c24117c
+          Action: "com.google.android.c2dm.intent.RECEIVE"
+
+Service Resolver Table:
+  Non-Data Actions:
+      com.google.firebase.INSTANCE_ID_EVENT:
+        fb8ee67 ridmik.keyboard.classic/com.google.firebase.iid.FirebaseInstanceIdService filter 50b1414
+          Action: "com.google.firebase.INSTANCE_ID_EVENT"
+          mPriority=-500, mOrder=0, mHasStaticPartialTypes=false, mHasDynamicPartialTypes=false
+      com.google.firebase.MESSAGING_EVENT:
+        2e7948b ridmik.keyboard.classic/setup.RidmikFirebaseMessagingService filter a5ec968
+          Action: "com.google.firebase.MESSAGING_EVENT"
+        a29a181 ridmik.keyboard.classic/com.google.firebase.messaging.FirebaseMessagingService filter db54226
+          Action: "com.google.firebase.MESSAGING_EVENT"
+          mPriority=-500, mOrder=0, mHasStaticPartialTypes=false, mHasDynamicPartialTypes=false
+      android.view.InputMethod:
+        a976a05 ridmik.keyboard.classic/net.hasnath.android.keyboard.LatinIME filter 9a3da5a permission android.permission.BIND_INPUT_METHOD
+          Action: "android.view.InputMethod"
+
+Registered ContentProviders:
+  ridmik.keyboard.classic/com.squareup.picasso.PicassoProvider:
+    Provider{e7c18e0 ridmik.keyboard.classic/com.squareup.picasso.PicassoProvider}
+  ridmik.keyboard.classic/com.google.firebase.provider.FirebaseInitProvider:
+    Provider{7ab0799 ridmik.keyboard.classic/com.google.firebase.provider.FirebaseInitProvider}
+
+ContentProvider Authorities:
+  [ridmik.keyboard.classic.firebaseinitprovider]:
+    Provider{7ab0799 ridmik.keyboard.classic/com.google.firebase.provider.FirebaseInitProvider}
+      applicationInfo=ApplicationInfo{9790a5e ridmik.keyboard.classic}
+  [ridmik.keyboard.classic.com.squareup.picasso]:
+    Provider{e7c18e0 ridmik.keyboard.classic/com.squareup.picasso.PicassoProvider}
+      applicationInfo=ApplicationInfo{c663e3f ridmik.keyboard.classic}
+
+Key Set Manager:
+  [ridmik.keyboard.classic]
+      Signing KeySets: 36
+
+Packages:
+  Package [ridmik.keyboard.classic] (ff526b0):
+    userId=10168
+    pkg=Package{239e30c ridmik.keyboard.classic}
+    codePath=/data/app/~~BrLa2cMmb5mdhEEC1bKu1A==/ridmik.keyboard.classic-ip1RT-634D_KaYyXXOT6Iw==
+    resourcePath=/data/app/~~BrLa2cMmb5mdhEEC1bKu1A==/ridmik.keyboard.classic-ip1RT-634D_KaYyXXOT6Iw==
+    legacyNativeLibraryDir=/data/app/~~BrLa2cMmb5mdhEEC1bKu1A==/ridmik.keyboard.classic-ip1RT-634D_KaYyXXOT6Iw==/lib
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    versionCode=15 minSdk=16 targetSdk=29
+    versionName=4.7.0
+    splits=[base]
+    apkSigningVersion=3
+    applicationInfo=ApplicationInfo{239e30c ridmik.keyboard.classic}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[]
+    dataDir=/data/user/0/ridmik.keyboard.classic
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesLibraries:
+      android.test.base
+    usesLibraryFiles:
+      /system/framework/android.test.base.jar
+    timeStamp=2025-08-02 13:36:23
+    firstInstallTime=2025-08-02 13:36:23
+    lastUpdateTime=2025-08-02 13:36:23
+    signatures=PackageSignatures{d1b8455 version:3, signatures:[edc34db5], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    requested permissions:
+      android.permission.VIBRATE
+      android.permission.RECORD_AUDIO
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.WAKE_LOCK
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+      com.google.android.c2dm.permission.RECEIVE
+    install permissions:
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=132279 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+    overlay paths:
+      /product/overlay/EmulationPixel5/EmulationPixel5Overlay.apk
+      gids=[3003]
+      runtime permissions:
+        android.permission.RECORD_AUDIO: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via package name:
+  queries via intent:
+  queryable via interaction:
+    User 0:
+
+Package Changes:
+  Sequence number=388
+  User 0:
+    seq=0, package=com.google.android.permissioncontroller
+    seq=1, package=com.android.systemui
+    seq=4, package=com.google.android.cellbroadcastreceiver
+    seq=13, package=com.google.android.sdksetup
+    seq=49, package=com.google.android.apps.youtube.music
+    seq=248, package=com.google.android.inputmethod.latin
+    seq=251, package=com.google.android.partnersetup
+    seq=298, package=com.android.vending
+    seq=299, package=com.google.android.youtube
+    seq=300, package=com.google.android.apps.messaging
+    seq=302, package=com.google.android.syncadapters.contacts
+    seq=308, package=com.android.settings
+    seq=314, package=com.google.android.apps.docs
+    seq=329, package=com.google.android.gsf
+    seq=334, package=com.android.camera2
+    seq=335, package=com.android.nfc
+    seq=336, package=com.android.stk
+    seq=338, package=com.android.traceur
+    seq=339, package=com.google.android.apps.maps
+    seq=341, package=com.google.android.apps.photos
+    seq=344, package=com.google.android.apps.wellbeing
+    seq=368, package=com.google.android.projection.gearhead
+    seq=369, package=com.google.android.setupwizard
+    seq=374, package=com.google.android.videos
+    seq=378, package=com.google.android.calendar
+    seq=383, package=com.google.android.gms
+    seq=384, package=com.google.android.gm
+    seq=385, package=com.google.android.googlequicksearchbox
+    seq=386, package=io.github.ylimit.droidbotapp
+    seq=387, package=ridmik.keyboard.classic
+
+
+Dexopt state:
+  [ridmik.keyboard.classic]
+    path: /data/app/~~BrLa2cMmb5mdhEEC1bKu1A==/ridmik.keyboard.classic-ip1RT-634D_KaYyXXOT6Iw==/base.apk
+      x86_64: [status=speed-profile] [reason=install]
+
+
+Compiler stats:
+  [ridmik.keyboard.classic]
+     base.apk - 274
+
+APEX session state:
+
+Active APEX packages:
+
+
+Inactive APEX packages:
+
+
+Factory APEX packages:
+
+

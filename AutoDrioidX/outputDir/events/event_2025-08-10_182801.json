@@ -1,0 +1,55 @@
+{
+  "tag": "2025-08-10_182801",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1370
+        ],
+        [
+          1036,
+          1502
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/btnLogin",
+      "checked": false,
+      "text": "Login",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 5,
+      "temp_id": 10,
+      "size": "992*132",
+      "signature": "[class]android.widget.Button[resource_id]com.example.splapp:id/btnLogin[text]Login[enabled,,]",
+      "view_str": "7122cd40ec57a5a3c4809cac02bbf743",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.example.splapp:id/btnLogin",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button bound_box=44,1370,1036,1502>Login</button>"
+    }
+  },
+  "start_state": "f9816366c08c11c30ec6ec539e14009a",
+  "stop_state": "f9816366c08c11c30ec6ec539e14009a",
+  "event_str": "CustomTouchEvent(state=f9816366c08c11c30ec6ec539e14009a, view=7122cd40ec57a5a3c4809cac02bbf743(Login/Button-Login))"
+}

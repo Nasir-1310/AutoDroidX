@@ -1,0 +1,58 @@
+{
+  "tag": "2025-08-04_152138",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.example.splapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          44,
+          1203
+        ],
+        [
+          1036,
+          1326
+        ]
+      ],
+      "resource_id": "com.example.splapp:id/etUsername",
+      "checked": false,
+      "text": "simonb",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 5,
+      "temp_id": 9,
+      "size": "992*123",
+      "signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername[text]simonb[enabled,,]",
+      "view_str": "838b6f486024815e968e606dd3d972c8",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.example.splapp:id/etUsername",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=44,1203,1036,1326>simonb</input>"
+    },
+    "text": ""
+  },
+  "start_state": "1340f7ddedeb664f810cbb5bdb35fc34",
+  "stop_state": "1340f7ddedeb664f810cbb5bdb35fc34",
+  "event_str": "CustomSetTextEvent(state=1340f7ddedeb664f810cbb5bdb35fc34, view=838b6f486024815e968e606dd3d972c8(Login/EditText-simonb), text=)"
+}

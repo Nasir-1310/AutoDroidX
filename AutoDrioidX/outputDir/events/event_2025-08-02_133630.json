@@ -1,0 +1,11 @@
+{
+  "tag": "2025-08-02_133630",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start ridmik.keyboard.classic/setup.MainActivity"
+  },
+  "start_state": "ed789748fa0d2910d4e579f228c68d37",
+  "stop_state": "1f8b9e0e76085d37bf20d4d3553117a0",
+  "event_str": "IntentEvent(intent='am start ridmik.keyboard.classic/setup.MainActivity')"
+}
