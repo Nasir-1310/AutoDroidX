@@ -1,4 +1,4 @@
-![DroidBot UTG](droidbot/resources/dummy_documents/droidbot_utg.png)
+<!-- ![DroidBot UTG](droidbot/resources/dummy_documents/droidbot_utg.png)
 
 # DroidBot
 
@@ -82,4 +82,4 @@ A sample evaluation report can be found [here](http://honeynet.github.io/droidbo
 
 - [DroidBot Blog Posts](http://honeynet.github.io/droidbot/)
 - [droidbotApp Source Code](https://github.com/ylimit/droidbotApp)
-- [How to contact the author](http://ylimit.github.io)
+- [How to contact the author](http://ylimit.github.io) -->
