@@ -839,7 +839,7 @@ class SetTextEvent(UIEvent):
         touch_event = TouchEvent(x=x, y=y)
         touch_event.send(device)
         _time.sleep(1)  # wait for the field to gain focus before typing
-        device.view_set_text(self.text)
+        device.view_set_text(self.text, field_x=x, field_y=y)
         return True
 
     def get_event_str(self, state):

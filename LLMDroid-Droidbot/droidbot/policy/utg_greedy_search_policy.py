@@ -86,6 +86,10 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
         has_username = False
         action_button = None
         screen_type = None
+        
+        # Collect all possible buttons for prioritization
+        login_buttons = []
+        register_buttons = []
 
         for view in state.views:
             combined = self._combined_text(view)
@@ -105,18 +109,50 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
                 if any(h in combined for h in self.hints.get("username_hints", [])):
                     has_username = True
 
-            # Detect login/register button
+            # Collect button candidates for prioritization
             if view.get('clickable') and view.get('enabled'):
                 btn_text = ' '.join([
                     self._safe_str(view.get('text')),
                     self._safe_str(view.get('content_description'))
                 ])
                 if any(b in btn_text for b in self.hints.get("login_button_texts", [])):
-                    action_button = view
-                    screen_type = "login"
+                    login_buttons.append(view)
                 if any(b in btn_text for b in self.hints.get("register_button_texts", [])):
-                    action_button = view
-                    screen_type = "register"
+                    register_buttons.append(view)
+
+        # Priority-based button selection:
+        # 1. If we have filled fields (email/username + password), prefer login button
+        # 2. If no login button available, use register button
+        # 3. If neither available, no action button
+        if (has_email or has_username) and has_password and login_buttons:
+            action_button = login_buttons[0]
+            screen_type = "login"
+        elif login_buttons:
+            action_button = login_buttons[0] 
+            screen_type = "login"
+        elif register_buttons:
+            action_button = register_buttons[0]
+            screen_type = "register"
+        else:
+            action_button = None
+            screen_type = None
+
+        # Priority-based button selection:
+        # 1. If we have filled fields (email/username + password), prefer login button
+        # 2. If no login button available, use register button
+        # 3. If neither available, no action button
+        if (has_email or has_username) and has_password and login_buttons:
+            action_button = login_buttons[0]
+            screen_type = "login"
+        elif login_buttons:
+            action_button = login_buttons[0] 
+            screen_type = "login"
+        elif register_buttons:
+            action_button = register_buttons[0]
+            screen_type = "register"
+        else:
+            action_button = None
+            screen_type = None
 
         # Require at least: password field + (email or username) + a button
         # Don't require title text – many apps don't have an explicit title
@@ -138,47 +174,89 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
                 return view
         return None
 
-    def _build_login_events(self, state, credential, button_view):
+    def _build_login_events(self, state, credential, button_view, screen_type="login"):
         """
         Build a list of InputEvents (SetText + Touch) for one login/register attempt.
         Views already have 'widget' set by DeviceState.__init_widgets, so no need to recreate.
         Returns a list of events, or empty list if required fields are missing.
+
+        On retry attempts (credential_index > 1) every editable field that will be
+        overwritten is cleared first by inserting a SetTextEvent with empty-string
+        content *before* the real value event, so no residual data is left.
         """
         from ..input_event import SetTextEvent, TouchEvent
 
-        email = credential.get("email", "")
-        username = credential.get("username", "")
-        password = credential.get("password", "")
-
-        email_view = self._find_field(state.views, self.hints.get("email_hints", []))
-        username_view = self._find_field(state.views, self.hints.get("username_hints", []))
-        password_view = self._find_field(state.views, self.hints.get("password_hints", []))
-
-        if not password_view or not button_view:
-            self.logger.warning("Login: missing password field or button – cannot build events")
-            return []
-
-        if not email_view and not username_view:
-            self.logger.warning("Login: no email/username field found – cannot build events")
-            return []
-
         events = []
+        is_retry = self._credential_index > 1  # first attempt is index 1 after increment
+        if is_retry:
+            self.logger.info("Retry attempt – fields will be cleared before entering new credentials")
 
-        # Fill email field
-        if email_view and email:
-            events.append(SetTextEvent(view=email_view, text=email))
-        elif email_view and username:
-            # If no email credential but email field exists, try username in it
-            events.append(SetTextEvent(view=email_view, text=username))
+        if screen_type == "register":
+            # For register screens, use register form data and fill all available fields
+            register_data_list = self.config.get("RegisterFormData", [{}])
+            # Cycle through register data entries on retries
+            reg_idx = (self._credential_index - 1) % max(len(register_data_list), 1)
+            register_data = register_data_list[reg_idx] if register_data_list else {}
 
-        # Fill username field (if separate from email)
-        if username_view and username:
-            events.append(SetTextEvent(view=username_view, text=username))
-        elif username_view and email:
-            events.append(SetTextEvent(view=username_view, text=email))
+            # Map of field types to hints and data
+            field_mappings = {
+                "email": (self.hints.get("email_hints", []), register_data.get("email", "")),
+                "username": (self.hints.get("username_hints", []), register_data.get("username", "")),
+                "password": (self.hints.get("password_hints", []), register_data.get("password", "")),
+                "confirm_password": (self.hints.get("confirm_password_hints", []), register_data.get("confirm_password", "")),
+                "first_name": (self.hints.get("first_name_hints", []), register_data.get("first_name", "")),
+                "last_name": (self.hints.get("last_name_hints", []), register_data.get("last_name", "")),
+                "phone": (self.hints.get("phone_hints", []), register_data.get("phone", "")),
+                "age": (self.hints.get("age_hints", []), register_data.get("age", ""))
+            }
 
-        # Fill password field
-        events.append(SetTextEvent(view=password_view, text=password))
+            # Fill all available fields for register
+            for field_name, (hints, data) in field_mappings.items():
+                if data:  # Only if we have data for this field
+                    field_view = self._find_field(state.views, hints)
+                    if field_view:
+                        self.logger.debug(f"Register: filling {field_name} with '{data}'")
+                        events.append(SetTextEvent(view=field_view, text=data))
+                        
+            # Verify we have at least password field for register
+            password_view = self._find_field(state.views, self.hints.get("password_hints", []))
+            if not password_view:
+                self.logger.warning("Register: missing password field – cannot build events")
+                return []
+                
+        else:
+            # Original login logic
+            email = credential.get("email", "")
+            username = credential.get("username", "")
+            password = credential.get("password", "")
+
+            email_view = self._find_field(state.views, self.hints.get("email_hints", []))
+            username_view = self._find_field(state.views, self.hints.get("username_hints", []))
+            password_view = self._find_field(state.views, self.hints.get("password_hints", []))
+
+            if not password_view or not button_view:
+                self.logger.warning("Login: missing password field or button – cannot build events")
+                return []
+
+            if not email_view and not username_view:
+                self.logger.warning("Login: no email/username field found – cannot build events")
+                return []
+
+            # Fill email field
+            if email_view and email:
+                events.append(SetTextEvent(view=email_view, text=email))
+            elif email_view and username:
+                # If no email credential but email field exists, try username in it
+                events.append(SetTextEvent(view=email_view, text=username))
+
+            # Fill username field (if separate from email)
+            if username_view and username:
+                events.append(SetTextEvent(view=username_view, text=username))
+            elif username_view and email:
+                events.append(SetTextEvent(view=username_view, text=email))
+
+            # Fill password field
+            events.append(SetTextEvent(view=password_view, text=password))
 
         # Click login/register button
         events.append(TouchEvent(view=button_view))
@@ -231,7 +309,7 @@ class UtgGreedySearchPolicy(UtgBasedInputPolicy):
                 if self._credential_index < len(self.credentials):
                     cred = self.credentials[self._credential_index]
                     self._credential_index += 1
-                    events = self._build_login_events(current_state, cred, button_view)
+                    events = self._build_login_events(current_state, cred, button_view, screen_type)
                     if events:
                         self.logger.info(
                             f"Trying credential {self._credential_index}/{len(self.credentials)}: "

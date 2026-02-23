@@ -860,25 +860,60 @@ class Device(object):
         else:
             self.adb.type(text)
 
-    def view_set_text(self, text):
+    def view_set_text(self, text, field_x=None, field_y=None):
         """
         Set text in the currently focused input field.
         Uses Google keyboard + adb input text for reliable input on SDK 26+.
         Falls back to DroidBotIME broadcast only if the standard approach fails.
+
+        If field_x/field_y are provided, re-taps the field after switching
+        the IME so the input connection is guaranteed to be alive.
         """
         try:
-            # Switch to Google keyboard for reliable text input
+            # Step 1: Switch to Google keyboard for reliable text input
             self.adb.run_cmd(['shell', 'ime', 'set',
                               'com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME'])
+            time.sleep(0.5)
+
+            # Step 2: Re-tap the field to restore focus after the IME switch
+            if field_x is not None and field_y is not None:
+                self.adb.run_cmd(['shell', 'input', 'tap', str(field_x), str(field_y)])
+                time.sleep(0.5)
+
+            # Step 3: Clear any existing text in the field.
+            #
+            # NOTE: KEYCODE_CTRL_A does NOT exist in Android — it silently fails.
+            # Instead we use two reliable techniques:
+            #
+            #   a) Triple-tap the field → selects all text in most EditText impls
+            #   b) Brute-force: MOVE_END + many KEYCODE_DEL (backspace) presses
+            #
+            # Together these guarantee the field is empty before typing.
+
+            # 3a — Triple-tap to select all
+            if field_x is not None and field_y is not None:
+                for _ in range(3):
+                    self.adb.run_cmd(['shell', 'input', 'tap',
+                                      str(field_x), str(field_y)])
+                    time.sleep(0.06)  # rapid taps ≈ triple-click
+                time.sleep(0.3)
+                # Delete the selected text
+                self.adb.run_cmd(['shell', 'input', 'keyevent', 'KEYCODE_DEL'])
+                time.sleep(0.2)
+
+            # 3b — Move cursor to the end then spam backspace (KEYCODE_DEL = 67)
+            #       This catches any edge-case where triple-tap didn't select all.
+            self.adb.run_cmd(['shell', 'input', 'keyevent', 'KEYCODE_MOVE_END'])
+            time.sleep(0.1)
+            # Send 30 backspace keys in a single command — fast & reliable
+            self.adb.run_cmd(['shell', 'input', 'keyevent'] + ['67'] * 30)
             time.sleep(0.3)
-            # Select all existing text and delete it
-            self.adb.run_cmd(['shell', 'input', 'keyevent', 'KEYCODE_CTRL_A'])
-            self.adb.run_cmd(['shell', 'input', 'keyevent', 'KEYCODE_DEL'])
-            time.sleep(0.2)
-            # Type the new text via adb input text
+
+            # Step 4: Type the new text via adb input text
             self.adb.run_cmd(['shell', 'input', 'text', text])
             time.sleep(0.3)
-            # Switch back to DroidBotIME so it stays as default for other operations
+
+            # Step 5: Switch back to DroidBotIME so it stays as default
             self.adb.run_cmd(['shell', 'ime', 'set',
                               'io.github.ylimit.droidbotapp/.DroidBotIME'])
         except Exception as e:

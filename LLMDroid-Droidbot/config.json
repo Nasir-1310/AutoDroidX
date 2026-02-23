@@ -16,9 +16,19 @@
             "password": "Pass123!"
         },
         {
-            "email": "user2@gmail.com",
-            "username": "user_two",
-            "password": "Secure@456"
+            "email": "nasir@gmail.com",
+            "username": "nasir", 
+            "password": "nasirnasir"
+        },
+        {
+            "email": "aaaa@gmail.com",
+            "username": "aaaaUser",
+            "password": "aaaaaaaa"
+        },
+         {
+            "email": "test@example.com",
+            "username": "testuser",
+            "password": "Pass123!"
         },
         {
             "email": "nasir_test@domain.com",
@@ -27,13 +37,52 @@
         }
     ],
 
+    "RegisterFormData": [
+        {
+            "first_name": "John",
+            "last_name": "Doe", 
+            "username": "johndoe123",
+            "email": "john.doe@example.com",
+            "phone": "1234567890",
+            "age": "25",
+            "password": "SecurePass123!",
+            "confirm_password": "SecurePass123!"
+        },
+        {
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "username": "janesmith456", 
+            "email": "jane.smith@gmail.com",
+            "phone": "9876543210",
+            "age": "28", 
+            "password": "MyPassword456!",
+            "confirm_password": "MyPassword456!"
+        },
+        {
+            "first_name": "Alice",
+            "last_name": "Johnson",
+            "username": "alicej789",
+            "email": "alice.johnson@domain.com", 
+            "phone": "5551234567",
+            "age": "30",
+            "password": "AlicePass789!",
+            "confirm_password": "AlicePass789!"
+        }
+    ],
+
     "LoginHints": {
-        "email_hints": ["email", "e-mail", "enter your email", "mail"],
-        "username_hints": ["username", "user name", "enter your username", "user"],
-        "password_hints": ["password", "pass", "enter your password"],
-        "login_titles": ["login", "sign in", "log in"],
-        "register_titles": ["register", "sign up", "create account"],
-        "login_button_texts": ["login", "sign in", "log in"],
-        "register_button_texts": ["register", "sign up", "create account"]
+        "email_hints": ["email", "e-mail", "enter your email", "mail", "enter email"],
+        "username_hints": ["username", "user name", "enter your username", "user", "enter username"],
+        "password_hints": ["password", "pass", "enter your password", "enter password"],
+        "confirm_password_hints": ["confirm password", "confirm pass", "re-enter password", "repeat password", "verify password"],
+        "first_name_hints": ["first name", "firstname", "enter your first name", "first", "name"],
+        "last_name_hints": ["last name", "lastname", "enter your last name", "surname", "family name"],
+        "phone_hints": ["phone", "phone number", "mobile", "cell", "contact", "enter your phone", "telephone"],
+        "age_hints": ["age", "enter your age", "enter age", "years old"],
+        "login_titles": ["login", "LOGIN", "sign in", "log in", "Sign In", "Log In"],
+        "register_titles": ["register", "REGISTER", "sign up", "create account", "Sign Up", "Create Account", "registration"],
+        "login_button_texts": ["login", "sign in", "log in", "Login", "Sign In", "Log In", "LOGIN"],
+        "register_button_texts": ["register", "sign up", "create account", "Register", "Sign Up", "Create Account", "REGISTER"],
+        "forgot_password_texts": ["forgot password", "forgot", "reset password", "Forgot Password", "Reset Password"]
     }
 }
