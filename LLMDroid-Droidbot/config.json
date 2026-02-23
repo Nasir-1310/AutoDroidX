@@ -71,18 +71,18 @@
     ],
 
     "LoginHints": {
-        "email_hints": ["email", "e-mail", "enter your email", "mail", "enter email"],
-        "username_hints": ["username", "user name", "enter your username", "user", "enter username"],
-        "password_hints": ["password", "pass", "enter your password", "enter password"],
-        "confirm_password_hints": ["confirm password", "confirm pass", "re-enter password", "repeat password", "verify password"],
-        "first_name_hints": ["first name", "firstname", "enter your first name", "first", "name"],
-        "last_name_hints": ["last name", "lastname", "enter your last name", "surname", "family name"],
-        "phone_hints": ["phone", "phone number", "mobile", "cell", "contact", "enter your phone", "telephone"],
-        "age_hints": ["age", "enter your age", "enter age", "years old"],
-        "login_titles": ["login", "LOGIN", "sign in", "log in", "Sign In", "Log In"],
-        "register_titles": ["register", "REGISTER", "sign up", "create account", "Sign Up", "Create Account", "registration"],
-        "login_button_texts": ["login", "sign in", "log in", "Login", "Sign In", "Log In", "LOGIN"],
-        "register_button_texts": ["register", "sign up", "create account", "Register", "Sign Up", "Create Account", "REGISTER"],
-        "forgot_password_texts": ["forgot password", "forgot", "reset password", "Forgot Password", "Reset Password"]
+        "email_hints": ["email", "e-mail", "enter your email", "mail", "enter email", "your email"],
+        "username_hints": ["username", "user name", "enter your username", "enter username", "your username"],
+        "password_hints": ["password", "enter your password", "enter password", "your password"],
+        "confirm_password_hints": ["confirm your password", "confirm password", "re-enter your password", "re-enter password", "repeat password", "repeat your password", "verify password", "verify your password", "retype password"],
+        "first_name_hints": ["first name", "firstname", "enter your first name", "your first name"],
+        "last_name_hints": ["last name", "lastname", "enter your last name", "your last name", "surname", "family name"],
+        "phone_hints": ["phone", "phone number", "mobile", "cell", "contact", "enter your phone", "telephone", "your phone"],
+        "age_hints": ["age", "enter your age", "enter age", "your age"],
+        "login_titles": ["login", "sign in", "log in"],
+        "register_titles": ["register", "sign up", "create account", "registration", "create your account"],
+        "login_button_texts": ["login", "sign in", "log in"],
+        "register_button_texts": ["register", "sign up", "create account"],
+        "forgot_password_texts": ["forgot password", "forgot", "reset password"]
     }
 }
