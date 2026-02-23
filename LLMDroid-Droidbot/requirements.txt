@@ -1,0 +1,14 @@
+# requirements.txt  (LLMDroid-Droidbot-এর জন্য)
+#run this command below 
+# $env:PYTHONUTF8=1
+# pip install -r requirements.txt
+# requirements.txt  (LLMDroid-Droidbot-এর জন্য — অন্য কম্পিউটারে এক কমান্ডে ইনস্টল)
+openai==1.40.0
+androguard==3.3.5
+networkx==3.3
+Pillow==10.4.0
+uiautomator2==2.16.22
+opencv-python==4.10.0.84
+numpy==1.26.4
+requests==2.32.3
+python-dotenv==1.0.1   # .env ফাইল পড়ার জন্য
