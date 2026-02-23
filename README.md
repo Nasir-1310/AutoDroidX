@@ -1,1 +1,40 @@
 "# AutoDroidX" 
+{
+    "AppName": "final app for login-register check",
+    "Description": "This is log in register app , for testing login and register ", 
+    "ApiKey": "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",
+    "TotalMethod": 75480,
+    "Tag": "PIPE_SUPER_LOG",
+    "ClassFilePath": "D:\\Nasir\\LLMDroid\\LLMDroid v1\\LLMDroid\\apks\\final.apk",
+    "EcFilePath": "D:\\Nasir\\LLMDroid\\LLMDroid v1\\LLMDroid\\logs",
+    "Model": "llama-3.1-8b-instant",
+    "BaseUrl": "https://api.groq.com/openai/v1",
+
+    "LoginCredentials": [
+        {
+            "email": "test1@example.com",
+            "username": "testuser1",
+            "password": "Pass123!"
+        },
+        {
+            "email": "user2@gmail.com",
+            "username": "user_two",
+            "password": "Secure@456"
+        },
+        {
+            "email": "nasir_test@domain.com",
+            "username": "mdnasir",
+            "password": "TestLogin789"
+        }
+    ],
+
+    "LoginHints": {
+        "email_hints": ["email", "e-mail", "enter your email", "mail"],
+        "username_hints": ["username", "user name", "enter your username", "user"],
+        "password_hints": ["password", "pass", "enter your password"],
+        "login_titles": ["login", "sign in", "log in"],
+        "register_titles": ["register", "sign up", "create account"],
+        "login_button_texts": ["login", "sign in", "log in"],
+        "register_button_texts": ["register", "sign up", "create account"]
+    }
+}
