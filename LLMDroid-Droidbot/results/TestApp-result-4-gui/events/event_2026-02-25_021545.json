@@ -1,0 +1,14 @@
+{
+  "tag": "2026-02-25_021545",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "action_type": "STOP",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "intent": "am force-stop com.test.testapp"
+  },
+  "start_state": "36ee419c064ed8ab03bbc208cbfbc87c",
+  "stop_state": "4211cf42b5385791d4d6650b31adf7f7",
+  "event_str": "IntentEvent(intent='am force-stop com.test.testapp')"
+}

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMDroid - Android Testing Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .terminal-scroll::-webkit-scrollbar { width: 8px; }
+        .terminal-scroll::-webkit-scrollbar-track { background: #1e1e1e; }
+        .terminal-scroll::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        .terminal-scroll::-webkit-scrollbar-thumb:hover { background: #555; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .pulse { animation: pulse 2s infinite; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // ==================== API Service ====================
+        const getAPIBase = () => {
+            const protocol = window.location.protocol === 'https:' ? 'https://' : 'http://';
+            const wsProtocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
+            const host = window.location.host;
+            return {
+                http: `${protocol}${host}`,
+                ws: `${wsProtocol}${host}`
+            };
+        };
+        
+        const API_URLS = getAPIBase();
+        
+        const api = {
+            getStatus: () => fetch(`${API_URLS.http}/api/status`).then(r => r.json()),
+            getConfig: () => fetch(`${API_URLS.http}/api/config`).then(r => r.json()),
+            getCoverage: () => fetch(`${API_URLS.http}/api/coverage`).then(r => r.json()),
+            getFiles: () => fetch(`${API_URLS.http}/api/files`).then(r => r.json()),
+            getDevices: () => fetch(`${API_URLS.http}/api/devices`).then(r => r.json()),
+            start: (data) => fetch(`${API_URLS.http}/api/start`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            }).then(r => r.json()),
+            stop: () => fetch(`${API_URLS.http}/api/stop`, { method: 'POST' }).then(r => r.json())
+        };
+
+        // ==================== Icons ====================
+        const Icons = {
+            Play: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/></svg>,
+            Stop: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" fill="currentColor"/></svg>,
+            Settings: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>,
+            Folder: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>,
+            File: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>,
+            Image: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>,
+            Terminal: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>,
+            Chart: () => <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>,
+            Robot: () => <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg>,
+            Refresh: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+        };
+
+        // ==================== Status Badge ====================
+        function StatusBadge({ running }) {
+            return (
+                <div className={`flex items-center gap-2 px-3 py-1 rounded-full ${running ? 'bg-green-500/20 text-green-400' : 'bg-gray-500/20 text-gray-400'}`}>
+                    <div className={`w-2 h-2 rounded-full ${running ? 'bg-green-400 pulse' : 'bg-gray-400'}`}></div>
+                    <span className="text-sm font-medium">{running ? 'Running' : 'Stopped'}</span>
+                </div>
+            );
+        }
+
+        // ==================== Terminal Log ====================
+        function TerminalLog({ logs }) {
+            const terminalRef = useRef(null);
+            
+            useEffect(() => {
+                if (terminalRef.current) {
+                    terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
+                }
+            }, [logs]);
+
+            const getLogColor = (level) => {
+                switch(level) {
+                    case 'ERROR': return 'text-red-400';
+                    case 'WARNING': return 'text-yellow-400';
+                    case 'COVERAGE': return 'text-cyan-400';
+                    case 'DEBUG': return 'text-gray-500';
+                    default: return 'text-gray-300';
+                }
+            };
+
+            return (
+                <div className="bg-[#1e1e1e] rounded-lg border border-gray-700 h-full flex flex-col">
+                    <div className="flex items-center gap-2 px-4 py-2 border-b border-gray-700 bg-gray-800/50">
+                        <Icons.Terminal />
+                        <span className="font-medium">Terminal Output</span>
+                        <span className="ml-auto text-xs text-gray-500">{logs.length} lines</span>
+                    </div>
+                    <div ref={terminalRef} className="flex-1 p-4 overflow-y-auto terminal-scroll mono text-sm">
+                        {logs.map((log, i) => (
+                            <div key={i} className={`${getLogColor(log.level)} leading-relaxed`}>
+                                <span className="text-gray-600">[{log.timestamp?.split('T')[1]?.split('.')[0] || ''}]</span>
+                                {' '}{log.message}
+                            </div>
+                        ))}
+                        {logs.length === 0 && (
+                            <div className="text-gray-500 italic">Waiting for output...</div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // ==================== Coverage Panel ====================
+        function CoveragePanel({ coverage }) {
+            const chartRef = useRef(null);
+            const chartInstance = useRef(null);
+
+            useEffect(() => {
+                if (chartRef.current && coverage.history?.length > 0) {
+                    if (chartInstance.current) {
+                        chartInstance.current.destroy();
+                    }
+                    
+                    const ctx = chartRef.current.getContext('2d');
+                    chartInstance.current = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: coverage.history.map((_, i) => i + 1),
+                            datasets: [{
+                                label: 'Coverage %',
+                                data: coverage.history.map(h => h.percentage),
+                                borderColor: '#60a5fa',
+                                backgroundColor: 'rgba(96, 165, 250, 0.1)',
+                                fill: true,
+                                tension: 0.4,
+                                pointRadius: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: { legend: { display: false } },
+                            scales: {
+                                x: { display: false },
+                                y: { 
+                                    grid: { color: 'rgba(255,255,255,0.1)' },
+                                    ticks: { color: '#9ca3af' }
+                                }
+                            }
+                        }
+                    });
+                }
+                return () => {
+                    if (chartInstance.current) {
+                        chartInstance.current.destroy();
+                    }
+                };
+            }, [coverage.history]);
+
+            const progressPercent = coverage.percentage || 0;
+
+            return (
+                <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                    <div className="flex items-center gap-2 mb-4">
+                        <Icons.Chart />
+                        <span className="font-medium">Code Coverage</span>
+                        {coverage.is_stuck && (
+                            <span className="ml-auto px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs rounded">Stuck</span>
+                        )}
+                    </div>
+                    
+                    <div className="text-center mb-4">
+                        <div className="text-4xl font-bold text-blue-400">{progressPercent.toFixed(2)}%</div>
+                        <div className="text-gray-400 text-sm">{coverage.covered || 0} / {coverage.total || 0} methods</div>
+                    </div>
+                    
+                    <div className="h-2 bg-gray-700 rounded-full overflow-hidden mb-4">
+                        <div 
+                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500"
+                            style={{ width: `${Math.min(progressPercent, 100)}%` }}
+                        ></div>
+                    </div>
+                    
+                    <div className="h-32">
+                        <canvas ref={chartRef}></canvas>
+                    </div>
+                </div>
+            );
+        }
+
+        // ==================== Config Panel ====================
+        function ConfigPanel({ config, devices, onStart, onStop, running }) {
+            const [formData, setFormData] = useState({
+                device: 'emulator-5554',
+                apk_path: '',
+                output_dir: '',
+                timeout: 3600,
+                policy: 'dfs_greedy'
+            });
+
+            useEffect(() => {
+                if (config.apk_path) {
+                    setFormData(prev => ({ ...prev, apk_path: config.apk_path }));
+                }
+            }, [config]);
+
+            const handleStart = () => {
+                // Validate required fields
+                if (!formData.apk_path.trim()) {
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'ERROR', message: 'APK Path is required' }]);
+                    return;
+                }
+                if (!formData.output_dir.trim()) {
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'ERROR', message: 'Output Directory is required' }]);
+                    return;
+                }
+                
+                // Ensure output directory uses forward slashes for cross-platform compatibility
+                const cleanedFormData = {
+                    ...formData,
+                    apk_path: formData.apk_path.trim(),
+                    output_dir: formData.output_dir.trim()
+                };
+                
+                onStart(cleanedFormData);
+            };
+
+            return (
+                <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                    <div className="flex items-center gap-2 mb-4">
+                        <Icons.Settings />
+                        <span className="font-medium">Configuration</span>
+                    </div>
+                    
+                    <div className="space-y-3">
+                        <div>
+                            <label className="text-xs text-gray-400 block mb-1">Device</label>
+                            <select 
+                                className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+                                value={formData.device}
+                                onChange={e => setFormData({...formData, device: e.target.value})}
+                                disabled={running}
+                            >
+                                {devices.map(d => <option key={d} value={d}>{d}</option>)}
+                                {devices.length === 0 && <option value="emulator-5554">emulator-5554</option>}
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label className="text-xs text-gray-400 block mb-1">APK Path</label>
+                            <input 
+                                type="text"
+                                className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+                                placeholder="D:\path\to\app.apk"
+                                value={formData.apk_path}
+                                onChange={e => setFormData({...formData, apk_path: e.target.value})}
+                                disabled={running}
+                            />
+                        </div>
+                        
+                        <div>
+                            <label className="text-xs text-gray-400 block mb-1">Output Directory</label>
+                            <input 
+                                type="text"
+                                className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+                                placeholder="D:\path\to\output"
+                                value={formData.output_dir}
+                                onChange={e => setFormData({...formData, output_dir: e.target.value})}
+                                disabled={running}
+                            />
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className="text-xs text-gray-400 block mb-1">Timeout (s)</label>
+                                <input 
+                                    type="number"
+                                    className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+                                    value={formData.timeout}
+                                    onChange={e => setFormData({...formData, timeout: parseInt(e.target.value)})}
+                                    disabled={running}
+                                />
+                            </div>
+                            <div>
+                                <label className="text-xs text-gray-400 block mb-1">Policy</label>
+                                <select 
+                                    className="w-full bg-gray-700 border border-gray-600 rounded px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+                                    value={formData.policy}
+                                    onChange={e => setFormData({...formData, policy: e.target.value})}
+                                    disabled={running}
+                                >
+                                    <option value="dfs_greedy">DFS Greedy</option>
+                                    <option value="bfs_greedy">BFS Greedy</option>
+                                    <option value="random">Random</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div className="pt-3 flex gap-2">
+                            {!running ? (
+                                <button 
+                                    onClick={handleStart}
+                                    className="flex-1 flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 px-4 py-2 rounded font-medium transition"
+                                >
+                                    <Icons.Play /> Start
+                                </button>
+                            ) : (
+                                <button 
+                                    onClick={onStop}
+                                    className="flex-1 flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500 px-4 py-2 rounded font-medium transition"
+                                >
+                                    <Icons.Stop /> Stop
+                                </button>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+
+        // ==================== File Explorer ====================
+        function FileExplorer({ files }) {
+            const getIcon = (file) => {
+                if (file.is_directory) return <Icons.Folder />;
+                if (file.icon === 'image') return <Icons.Image />;
+                return <Icons.File />;
+            };
+
+            const formatSize = (bytes) => {
+                if (!bytes) return '';
+                if (bytes < 1024) return `${bytes} B`;
+                if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+                return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+            };
+
+            return (
+                <div className="bg-gray-800 rounded-lg border border-gray-700 p-4 h-full">
+                    <div className="flex items-center gap-2 mb-4">
+                        <Icons.Folder />
+                        <span className="font-medium">Output Files</span>
+                    </div>
+                    
+                    <div className="space-y-1 max-h-64 overflow-y-auto">
+                        {files.map((file, i) => (
+                            <div key={i} className="flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-700 cursor-pointer text-sm">
+                                <span className={file.is_directory ? 'text-yellow-400' : 'text-gray-400'}>
+                                    {getIcon(file)}
+                                </span>
+                                <span className="flex-1 truncate">{file.name}</span>
+                                <span className="text-gray-500 text-xs">{formatSize(file.size)}</span>
+                            </div>
+                        ))}
+                        {files.length === 0 && (
+                            <div className="text-gray-500 italic text-sm">No output files yet</div>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        // ==================== Runtime Display ====================
+        function RuntimeDisplay({ startTime, running }) {
+            const [runtime, setRuntime] = useState(0);
+
+            useEffect(() => {
+                if (!running || !startTime) {
+                    setRuntime(0);
+                    return;
+                }
+
+                const interval = setInterval(() => {
+                    const start = new Date(startTime);
+                    const now = new Date();
+                    setRuntime(Math.floor((now - start) / 1000));
+                }, 1000);
+
+                return () => clearInterval(interval);
+            }, [running, startTime]);
+
+            const formatTime = (seconds) => {
+                const h = Math.floor(seconds / 3600);
+                const m = Math.floor((seconds % 3600) / 60);
+                const s = seconds % 60;
+                return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+            };
+
+            return (
+                <div className="text-gray-400 text-sm">
+                    Runtime: <span className="mono text-white">{formatTime(runtime)}</span>
+                </div>
+            );
+        }
+
+        // ==================== Main App ====================
+        function App() {
+            const [status, setStatus] = useState({ running: false });
+            const [config, setConfig] = useState({});
+            const [coverage, setCoverage] = useState({ percentage: 0, covered: 0, total: 0, history: [] });
+            const [files, setFiles] = useState([]);
+            const [devices, setDevices] = useState([]);
+            const [logs, setLogs] = useState([]);
+            const [connected, setConnected] = useState(false);
+            const wsRef = useRef(null);
+
+            // Fetch initial data
+            useEffect(() => {
+                const fetchData = async () => {
+                    try {
+                        const [statusRes, configRes, devicesRes] = await Promise.all([
+                            api.getStatus().catch(() => ({ running: false })),
+                            api.getConfig().catch(() => ({})),
+                            api.getDevices().catch(() => ({ devices: [] }))
+                        ]);
+                        setStatus(statusRes);
+                        setConfig(configRes);
+                        setDevices(devicesRes.devices || []);
+                        setConnected(true);
+                    } catch (e) {
+                        setConnected(false);
+                    }
+                };
+                fetchData();
+                const interval = setInterval(fetchData, 5000);
+                return () => clearInterval(interval);
+            }, []);
+
+            // Fetch coverage and files when running
+            useEffect(() => {
+                if (!status.running) return;
+                
+                const fetchRunningData = async () => {
+                    try {
+                        const [coverageRes, filesRes] = await Promise.all([
+                            api.getCoverage().catch(() => coverage),
+                            api.getFiles().catch(() => ({ files: [] }))
+                        ]);
+                        setCoverage(coverageRes);
+                        setFiles(filesRes.files || []);
+                    } catch (e) {}
+                };
+                
+                fetchRunningData();
+                const interval = setInterval(fetchRunningData, 3000);
+                return () => clearInterval(interval);
+            }, [status.running]);
+
+            // WebSocket connection
+            useEffect(() => {
+                const connectWs = () => {
+                    try {
+                        wsRef.current = new WebSocket(`${API_URLS.ws}/ws/logs`);
+                        
+                        wsRef.current.onmessage = (event) => {
+                            const log = JSON.parse(event.data);
+                            setLogs(prev => [...prev.slice(-500), log]);
+                        };
+                        
+                        wsRef.current.onclose = () => {
+                            setTimeout(connectWs, 3000);
+                        };
+                    } catch (e) {}
+                };
+                
+                connectWs();
+                return () => wsRef.current?.close();
+            }, []);
+
+            const handleStart = async (formData) => {
+                try {
+                    setLogs([{ timestamp: new Date().toISOString(), level: 'INFO', message: `Starting LLMDroid with device: ${formData.device}` }]);
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'INFO', message: `APK: ${formData.apk_path}` }]);
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'INFO', message: `Output: ${formData.output_dir}` }]);
+                    
+                    const result = await api.start(formData);
+                    
+                    if (result.pid) {
+                        setStatus({ running: true, pid: result.pid, start_time: new Date().toISOString() });
+                        setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'INFO', message: `Process started with PID: ${result.pid}` }]);
+                    } else {
+                        throw new Error(result.detail || 'Failed to start - unknown error');
+                    }
+                } catch (e) {
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'ERROR', message: `Failed to start: ${e.message}` }]);
+                    console.error('Start error:', e);
+                }
+            };
+
+            const handleStop = async () => {
+                try {
+                    await api.stop();
+                    setStatus({ running: false });
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'INFO', message: 'LLMDroid stopped.' }]);
+                } catch (e) {
+                    setLogs(prev => [...prev, { timestamp: new Date().toISOString(), level: 'ERROR', message: `Failed to stop: ${e.message}` }]);
+                }
+            };
+
+            return (
+                <div className="min-h-screen bg-gray-900">
+                    {/* Header */}
+                    <header className="gradient-bg border-b border-white/10">
+                        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <div className="p-2 bg-white/10 rounded-lg">
+                                    <Icons.Robot />
+                                </div>
+                                <div>
+                                    <h1 className="text-xl font-bold">LLMDroid</h1>
+                                    <p className="text-sm text-white/70">Android Testing Framework</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-4">
+                                <RuntimeDisplay startTime={status.start_time} running={status.running} />
+                                <StatusBadge running={status.running} />
+                                {!connected && (
+                                    <span className="text-xs text-red-400 flex items-center gap-1">
+                                        <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                                        Backend offline
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="max-w-7xl mx-auto p-6">
+                        <div className="grid grid-cols-12 gap-6">
+                            {/* Left Sidebar - Config */}
+                            <div className="col-span-3 space-y-6">
+                                <ConfigPanel 
+                                    config={config}
+                                    devices={devices}
+                                    onStart={handleStart}
+                                    onStop={handleStop}
+                                    running={status.running}
+                                />
+                                <CoveragePanel coverage={coverage} />
+                            </div>
+
+                            {/* Center - Terminal */}
+                            <div className="col-span-6 h-[600px]">
+                                <TerminalLog logs={logs} />
+                            </div>
+
+                            {/* Right Sidebar - Files */}
+                            <div className="col-span-3">
+                                <FileExplorer files={files} />
+                            </div>
+                        </div>
+                    </main>
+
+                    {/* Footer */}
+                    <footer className="border-t border-gray-800 py-4 text-center text-gray-500 text-sm">
+                        LLMDroid v1.0 • LLM-Guided Android Testing Framework
+                    </footer>
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>

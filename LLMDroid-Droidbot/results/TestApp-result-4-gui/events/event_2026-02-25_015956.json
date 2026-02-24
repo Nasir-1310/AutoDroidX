@@ -1,0 +1,62 @@
+{
+  "tag": "2026-02-25_015956",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          839,
+          84
+        ],
+        [
+          996,
+          177
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/tvLogout",
+      "checked": false,
+      "text": "Logout",
+      "class": "android.widget.TextView",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 7,
+      "temp_id": 9,
+      "size": "157*93",
+      "signature": "[class]android.widget.TextView[resource_id]com.test.testapp:id/tvLogout[text]Logout[enabled,,]",
+      "view_str": "8ace659e13529606f77ceb433f5dce19",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.TextView[resource_id]com.test.testapp:id/tvLogout",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "1",
+      "desc": "<button bound_box=839,84,996,177>Logout</button>"
+    }
+  },
+  "start_state": "13e85f5a753e90a2fad24c7e9ddb5f4b",
+  "stop_state": "13e85f5a753e90a2fad24c7e9ddb5f4b",
+  "event_str": "TouchEvent(state=13e85f5a753e90a2fad24c7e9ddb5f4b, view=8ace659e13529606f77ceb433f5dce19(HomeActivity/TextView-Logout))"
+}

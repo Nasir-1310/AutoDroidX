@@ -1,0 +1,14 @@
+{
+  "tag": "2026-02-25_015521",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "action_type": "OTHER",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 0,
+    "stop_intent": "am force-stop com.test.testapp"
+  },
+  "start_state": "82cd994428cf78a9fb05a6d9ef33311b",
+  "stop_state": "759c939c075137056f5587e8a373d2f7",
+  "event_str": "KillAppEvent()"
+}

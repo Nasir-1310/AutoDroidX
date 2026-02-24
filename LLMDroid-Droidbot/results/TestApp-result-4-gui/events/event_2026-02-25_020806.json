@@ -1,0 +1,58 @@
+{
+  "tag": "2026-02-25_020806",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        27
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          963
+        ],
+        [
+          1038,
+          1155
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/cardNotificationSettings",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 26,
+      "size": "996*192",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardNotificationSettings[text]None[enabled,,]",
+      "view_str": "d83e4566de75887b3104afdf86202d52",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardNotificationSettings"
+    }
+  },
+  "start_state": "2dc1589ff797913f83fdacbd0d2aba73",
+  "stop_state": "1dae17c0838ef6ed792d11a9e6f27ad3",
+  "event_str": "TouchEvent(state=2dc1589ff797913f83fdacbd0d2aba73, view=d83e4566de75887b3104afdf86202d52(ProfileActivity/FrameLayout-))"
+}

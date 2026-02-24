@@ -66,4 +66,7 @@ Gemfile.lock
 .DS_Store
 documents
 temp
-venv
+
+venv/
+config.json
+/logs

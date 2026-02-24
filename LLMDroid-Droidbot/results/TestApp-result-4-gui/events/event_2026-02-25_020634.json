@@ -1,0 +1,58 @@
+{
+  "tag": "2026-02-25_020634",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        20
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          739
+        ],
+        [
+          1038,
+          931
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/cardChangePassword",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 19,
+      "size": "996*192",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardChangePassword[text]None[enabled,,]",
+      "view_str": "3c1a7b5a6fce40541f29f831fdf6bafe",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardChangePassword"
+    }
+  },
+  "start_state": "2dc1589ff797913f83fdacbd0d2aba73",
+  "stop_state": "3ca08dd77823a5d8ff0e6c046ad4a2d2",
+  "event_str": "TouchEvent(state=2dc1589ff797913f83fdacbd0d2aba73, view=3c1a7b5a6fce40541f29f831fdf6bafe(ProfileActivity/FrameLayout-))"
+}

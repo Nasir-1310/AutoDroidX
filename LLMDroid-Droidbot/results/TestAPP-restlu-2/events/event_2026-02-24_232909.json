@@ -1,0 +1,65 @@
+{
+  "tag": "2026-02-24_232909",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "action_type": "INPUT",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "password input field",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          708
+        ],
+        [
+          996,
+          855
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etPassword",
+      "checked": false,
+      "text": "Enter your password",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 10,
+      "size": "912*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etPassword[text]Enter your password[enabled,,]",
+      "view_str": "8060ba723156d7c5dab826ff1659f827",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etPassword",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input text='password input field' bound_box=84,708,996,855>Enter your password</input>"
+    },
+    "text": "Pass123!"
+  },
+  "start_state": "21a71192cc84f2581040af1c5737f4f6",
+  "stop_state": "35bd504bcc9e8a2ea45cde4eeb8d5a08",
+  "event_str": "SetTextEvent(state=21a71192cc84f2581040af1c5737f4f6, view=8060ba723156d7c5dab826ff1659f827(MainActivity/EditText-Enter your), text=Pass123!)"
+}

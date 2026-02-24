@@ -1,0 +1,31 @@
+{
+    "Cluster0": {
+        "Overview": "",
+        "Function List": {},
+        "id": 0,
+        "root": "State0",
+        "states": [
+            [
+                0
+            ]
+        ]
+    },
+    "Cluster1": {
+        "Overview": "Login page of the app, allowing users to enter credentials and navigate to registration or password recovery.",
+        "Function List": {
+            "login": 3,
+            "navigate to 'Register'": 2,
+            "navigate to 'Forgot Password'": 1
+        },
+        "id": 1,
+        "root": "State1",
+        "states": [
+            [
+                3,
+                1,
+                2,
+                4
+            ]
+        ]
+    }
+}

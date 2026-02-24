@@ -1,0 +1,64 @@
+{
+  "tag": "2026-02-25_020418",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          1788
+        ],
+        [
+          1017,
+          2051
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etBio",
+      "checked": false,
+      "text": "Write something about yourself...",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 25,
+      "size": "954*263",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etBio[text]Write something about yourself...[enabled,,]",
+      "view_str": "ea7ea83e0b4925993d85901348e6814c",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etBio",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "18",
+      "desc": "<input bound_box=63,1788,1017,2051>Write something about yourself...</input>"
+    }
+  },
+  "start_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "stop_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "event_str": "TouchEvent(state=da8d210f6af61dc87f873b7068ebed7c, view=ea7ea83e0b4925993d85901348e6814c(EditProfileActivity/EditText-Write some))"
+}

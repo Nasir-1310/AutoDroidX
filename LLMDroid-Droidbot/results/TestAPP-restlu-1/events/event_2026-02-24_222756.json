@@ -1,0 +1,62 @@
+{
+  "tag": "2026-02-24_222756",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          1121
+        ],
+        [
+          1017,
+          1268
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/btnUpdatePassword",
+      "checked": false,
+      "text": "UPDATE PASSWORD",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 16,
+      "size": "954*147",
+      "signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnUpdatePassword[text]UPDATE PASSWORD[enabled,,]",
+      "view_str": "0ee873db10a74d47df48ef422783ffb0",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnUpdatePassword",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "9",
+      "desc": "<button bound_box=63,1121,1017,1268>UPDATE PASSWORD</button>"
+    }
+  },
+  "start_state": "b08bdbc8bc4964ce77a7c91fbebf6155",
+  "stop_state": "32bbd885543655cc98e4dc23665939d4",
+  "event_str": "TouchEvent(state=b08bdbc8bc4964ce77a7c91fbebf6155, view=0ee873db10a74d47df48ef422783ffb0(ChangePasswordActivity/Button-UPDATE PAS))"
+}

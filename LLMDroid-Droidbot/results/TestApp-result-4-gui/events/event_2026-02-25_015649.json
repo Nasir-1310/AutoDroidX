@@ -1,0 +1,65 @@
+{
+  "tag": "2026-02-25_015649",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "action_type": "INPUT",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "email input field",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          519
+        ],
+        [
+          996,
+          666
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etEmail",
+      "checked": false,
+      "text": "test1@example.com",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 9,
+      "size": "912*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etEmail[text]test1@example.com[enabled,,]",
+      "view_str": "80322dd8288e43449d9af671295fb43b",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etEmail",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<input text='email input field' bound_box=84,519,996,666>test1@example.com</input>"
+    },
+    "text": "nasir@gmail.com"
+  },
+  "start_state": "35bd504bcc9e8a2ea45cde4eeb8d5a08",
+  "stop_state": "2368d354b5616cb5dca285f138d02ccc",
+  "event_str": "SetTextEvent(state=35bd504bcc9e8a2ea45cde4eeb8d5a08, view=80322dd8288e43449d9af671295fb43b(MainActivity/EditText-test1@exam), text=nasir@gmail.com)"
+}

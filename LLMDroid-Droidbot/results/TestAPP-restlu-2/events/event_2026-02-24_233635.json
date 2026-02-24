@@ -1,0 +1,62 @@
+{
+  "tag": "2026-02-24_233635",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          2114
+        ],
+        [
+          1017,
+          2261
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/btnSave",
+      "checked": false,
+      "text": "SAVE CHANGES",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 26,
+      "size": "954*147",
+      "signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnSave[text]SAVE CHANGES[enabled,,]",
+      "view_str": "137f2b84861d35f39d2fa3151d0dab81",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnSave",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "19",
+      "desc": "<button bound_box=63,2114,1017,2261>SAVE CHANGES</button>"
+    }
+  },
+  "start_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "stop_state": "7086c6639d0dd99cac5dfacf0b0a071f",
+  "event_str": "TouchEvent(state=da8d210f6af61dc87f873b7068ebed7c, view=137f2b84861d35f39d2fa3151d0dab81(EditProfileActivity/Button-SAVE CHANG))"
+}

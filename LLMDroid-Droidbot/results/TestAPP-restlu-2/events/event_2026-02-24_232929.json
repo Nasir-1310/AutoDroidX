@@ -1,0 +1,62 @@
+{
+  "tag": "2026-02-24_232929",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "login button",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          84,
+          918
+        ],
+        [
+          996,
+          1065
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/btnLogin",
+      "checked": false,
+      "text": "Login",
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 11,
+      "size": "912*147",
+      "signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnLogin[text]Login[enabled,,]",
+      "view_str": "9f32bd7c4f577e3074d6ddd28312236d",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Button[resource_id]com.test.testapp:id/btnLogin",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "4",
+      "desc": "<button text='login button' bound_box=84,918,996,1065>Login</button>"
+    }
+  },
+  "start_state": "35bd504bcc9e8a2ea45cde4eeb8d5a08",
+  "stop_state": "35bd504bcc9e8a2ea45cde4eeb8d5a08",
+  "event_str": "TouchEvent(state=35bd504bcc9e8a2ea45cde4eeb8d5a08, view=9f32bd7c4f577e3074d6ddd28312236d(MainActivity/Button-Login))"
+}

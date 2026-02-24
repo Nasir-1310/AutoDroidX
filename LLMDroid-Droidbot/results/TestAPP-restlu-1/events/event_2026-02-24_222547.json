@@ -1,0 +1,63 @@
+{
+  "tag": "2026-02-24_222547",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          559,
+          1600
+        ],
+        [
+          733,
+          1684
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/rbOther",
+      "checked": false,
+      "text": "Other",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 23,
+      "size": "174*84",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbOther[text]Other[enabled,,]",
+      "view_str": "155685e3407f6ba227e23e473adf4de4",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbOther",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "16",
+      "desc": "<checkbox bound_box=559,1600,733,1684>Other</checkbox>"
+    }
+  },
+  "start_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "stop_state": "61f99b26e3b7d671a644df6bd6a65131",
+  "event_str": "TouchEvent(state=da8d210f6af61dc87f873b7068ebed7c, view=155685e3407f6ba227e23e473adf4de4(EditProfileActivity/RadioButton-Other))"
+}

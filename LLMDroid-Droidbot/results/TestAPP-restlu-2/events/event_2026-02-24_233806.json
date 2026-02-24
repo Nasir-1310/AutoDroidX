@@ -1,0 +1,56 @@
+{
+  "tag": "2026-02-24_233806",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          853,
+          522
+        ],
+        [
+          975,
+          593
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/switchEmail",
+      "checked": true,
+      "text": null,
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 14,
+      "temp_id": 18,
+      "size": "122*71",
+      "signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchEmail[text]None[enabled,checked,]",
+      "view_str": "c66d18cc69722f2a5657ecf26cc2f888",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchEmail"
+    }
+  },
+  "start_state": "08b739b5024cd96604fb3c59cd8277d0",
+  "stop_state": "00880315d3f3f5d9a5273e00541a5a1f",
+  "event_str": "TouchEvent(state=08b739b5024cd96604fb3c59cd8277d0, view=c66d18cc69722f2a5657ecf26cc2f888(NotificationSettingsActivity/Switch-))"
+}

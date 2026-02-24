@@ -1,0 +1,64 @@
+{
+  "tag": "2026-02-24_233604",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          63,
+          1349
+        ],
+        [
+          1017,
+          1496
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etDob",
+      "checked": false,
+      "text": "DD/MM/YYYY",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 18,
+      "size": "954*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etDob[text]DD/MM/YYYY[enabled,,]",
+      "view_str": "433e77c353a532460816933dfbf74475",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etDob",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "12",
+      "desc": "<input bound_box=63,1349,1017,1496>DD/MM/YYYY</input>"
+    }
+  },
+  "start_state": "61f99b26e3b7d671a644df6bd6a65131",
+  "stop_state": "61f99b26e3b7d671a644df6bd6a65131",
+  "event_str": "TouchEvent(state=61f99b26e3b7d671a644df6bd6a65131, view=433e77c353a532460816933dfbf74475(EditProfileActivity/EditText-DD/MM/YYYY))"
+}

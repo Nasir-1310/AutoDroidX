@@ -1,0 +1,56 @@
+{
+  "tag": "2026-02-25_020929",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          853,
+          707
+        ],
+        [
+          975,
+          778
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/switchSms",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 19,
+      "temp_id": 23,
+      "size": "122*71",
+      "signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchSms[text]None[enabled,,]",
+      "view_str": "59d61cb2e219ba14ab2171970744393c",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchSms"
+    }
+  },
+  "start_state": "08b739b5024cd96604fb3c59cd8277d0",
+  "stop_state": "21f122df6091b30dd2e83764335977d2",
+  "event_str": "TouchEvent(state=08b739b5024cd96604fb3c59cd8277d0, view=59d61cb2e219ba14ab2171970744393c(NotificationSettingsActivity/Switch-))"
+}

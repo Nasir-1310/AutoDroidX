@@ -1,0 +1,56 @@
+{
+  "tag": "2026-02-25_020951",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          853,
+          337
+        ],
+        [
+          975,
+          408
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/switchPush",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Switch",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 9,
+      "temp_id": 13,
+      "size": "122*71",
+      "signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchPush[text]None[enabled,,]",
+      "view_str": "55cffc9c8ff70326ecbd3eb150798d40",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.Switch[resource_id]com.test.testapp:id/switchPush"
+    }
+  },
+  "start_state": "09d872f4f7374da178fffed036b59f36",
+  "stop_state": "21f122df6091b30dd2e83764335977d2",
+  "event_str": "TouchEvent(state=09d872f4f7374da178fffed036b59f36, view=55cffc9c8ff70326ecbd3eb150798d40(NotificationSettingsActivity/Switch-))"
+}

@@ -1,0 +1,65 @@
+{
+  "tag": "2026-02-25_021804",
+  "event": {
+    "event_type": "set_text",
+    "log_lines": null,
+    "action_type": "INPUT",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 2,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "password input field",
+      "children": [],
+      "focused": true,
+      "bounds": [
+        [
+          84,
+          708
+        ],
+        [
+          996,
+          855
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etPassword",
+      "checked": false,
+      "text": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 10,
+      "size": "912*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etPassword[text]\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022[enabled,,]",
+      "view_str": "0f793758a6d1d84381968bb6f0baac96",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etPassword",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input text='password input field' bound_box=84,708,996,855>\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022</input>"
+    },
+    "text": "nasirnasir"
+  },
+  "start_state": "2368d354b5616cb5dca285f138d02ccc",
+  "stop_state": "143f6da4e2cc0d135f7697a26a01f4f8",
+  "event_str": "SetTextEvent(state=2368d354b5616cb5dca285f138d02ccc, view=0f793758a6d1d84381968bb6f0baac96(MainActivity/EditText-\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022), text=nasirnasir)"
+}

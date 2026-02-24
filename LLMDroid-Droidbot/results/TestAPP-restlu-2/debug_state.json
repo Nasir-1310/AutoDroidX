@@ -1,0 +1,124 @@
+{
+    "Cluster0": {
+        "Overview": "",
+        "Function List": {},
+        "id": 0,
+        "root": "State0",
+        "states": [
+            [
+                0
+            ]
+        ]
+    },
+    "Cluster1": {
+        "Overview": "Login page of the app, allowing users to enter credentials and navigate to registration or password recovery.",
+        "Function List": {
+            "login": 3,
+            "navigate to 'Register'": 2,
+            "navigate to 'Forgot Password'": 1
+        },
+        "id": 1,
+        "root": "State1",
+        "states": [
+            [
+                5,
+                1,
+                9,
+                7,
+                2,
+                6,
+                4,
+                11,
+                8,
+                10,
+                3
+            ]
+        ]
+    },
+    "Cluster2": {
+        "Overview": "Dashboard page displaying user information and navigation options for profile, settings, notifications, and app details.",
+        "Function List": {
+            "navigate to 'My Profile'": 0,
+            "navigate to 'Settings'": 4,
+            "navigate to 'Notifications'": 3,
+            "navigate to 'About'": 2,
+            "logout": 0
+        },
+        "id": 2,
+        "root": "State12",
+        "states": [
+            [
+                12
+            ]
+        ]
+    },
+    "Cluster3": {
+        "Overview": "Profile page displaying user information and options for editing settings and logging out.",
+        "Function List": {
+            "navigate to 'Edit Profile'": 0,
+            "navigate to 'Change Password'": 0,
+            "navigate to 'Notification Settings'": 0,
+            "navigate to 'Privacy Settings'": 4,
+            "navigate to 'My Activity'": 3,
+            "navigate to 'Help & Support'": 2,
+            "logout": 1
+        },
+        "id": 3,
+        "root": "State13",
+        "states": [
+            [
+                13
+            ]
+        ]
+    },
+    "Cluster4": {
+        "Overview": "Profile editing page for users to update personal information and preferences.",
+        "Function List": {
+            "save changes": 0,
+            "cancel changes": 1
+        },
+        "id": 4,
+        "root": "State14",
+        "states": [
+            [
+                14,
+                16,
+                15
+            ]
+        ]
+    },
+    "Cluster5": {
+        "Overview": "Page for changing user password with input fields and action buttons.",
+        "Function List": {
+            "update password": 0,
+            "cancel password change": 1
+        },
+        "id": 5,
+        "root": "State17",
+        "states": [
+            [
+                17
+            ]
+        ]
+    },
+    "Cluster6": {
+        "Overview": "Notification settings page allowing users to customize their notification preferences.",
+        "Function List": {
+            "save notification preferences": 6,
+            "toggle push notifications": 0,
+            "toggle email notifications": 0,
+            "toggle SMS notifications": 3,
+            "toggle promotions & offers": 2,
+            "toggle security alerts": 1
+        },
+        "id": 6,
+        "root": "State18",
+        "states": [
+            [
+                18,
+                20,
+                19
+            ]
+        ]
+    }
+}

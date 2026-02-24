@@ -1,0 +1,63 @@
+{
+  "tag": "2026-02-25_020136",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          291,
+          1600
+        ],
+        [
+          496,
+          1684
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/rbFemale",
+      "checked": false,
+      "text": "Female",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 22,
+      "size": "205*84",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbFemale[text]Female[enabled,,]",
+      "view_str": "20658f7220898f066c54a367effd401f",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbFemale",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [],
+      "local_id": "15",
+      "desc": "<checkbox bound_box=291,1600,496,1684>Female</checkbox>"
+    }
+  },
+  "start_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "stop_state": "aa85dc5faf91851ee2e59e2c68b278dc",
+  "event_str": "TouchEvent(state=da8d210f6af61dc87f873b7068ebed7c, view=20658f7220898f066c54a367effd401f(EditProfileActivity/RadioButton-Female))"
+}

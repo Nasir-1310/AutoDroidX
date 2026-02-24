@@ -1,0 +1,14 @@
+{
+  "tag": "2026-02-24_232836",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "action_type": "START",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "intent": "am start com.test.testapp/com.test.testapp.MainActivity"
+  },
+  "start_state": "6af8ea4318ee076f96c3733142fc06fe",
+  "stop_state": "1caa177db8ef698627261a232b743240",
+  "event_str": "IntentEvent(intent='am start com.test.testapp/com.test.testapp.MainActivity')"
+}

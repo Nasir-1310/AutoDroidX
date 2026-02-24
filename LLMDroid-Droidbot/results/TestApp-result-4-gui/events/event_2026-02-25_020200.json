@@ -1,0 +1,64 @@
+{
+  "tag": "2026-02-25_020200",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          596
+        ],
+        [
+          1017,
+          743
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etLastName",
+      "checked": false,
+      "text": "User",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 12,
+      "size": "954*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etLastName[text]User[enabled,,]",
+      "view_str": "65e199c5f4622b3a2e9b9af347e97e73",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etLastName",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "6",
+      "desc": "<input bound_box=63,596,1017,743>User</input>"
+    }
+  },
+  "start_state": "aa85dc5faf91851ee2e59e2c68b278dc",
+  "stop_state": "aa85dc5faf91851ee2e59e2c68b278dc",
+  "event_str": "TouchEvent(state=aa85dc5faf91851ee2e59e2c68b278dc, view=65e199c5f4622b3a2e9b9af347e97e73(EditProfileActivity/EditText-User))"
+}

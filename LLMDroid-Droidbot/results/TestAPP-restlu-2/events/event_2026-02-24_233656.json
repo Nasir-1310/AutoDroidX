@@ -1,0 +1,64 @@
+{
+  "tag": "2026-02-24_233656",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": true,
+      "clickable": true,
+      "is_password": true,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          345
+        ],
+        [
+          1017,
+          492
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/etCurrentPassword",
+      "checked": false,
+      "text": "Enter current password",
+      "class": "android.widget.EditText",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": true,
+      "parent": 6,
+      "temp_id": 10,
+      "size": "954*147",
+      "signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etCurrentPassword[text]Enter current password[enabled,,]",
+      "view_str": "252e5554f31fb7b86a710cb548df9df0",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.EditText[resource_id]com.test.testapp:id/etCurrentPassword",
+      "allowed_actions": [
+        "touch",
+        "set_text",
+        "long_touch"
+      ],
+      "special_attrs": [],
+      "local_id": "3",
+      "desc": "<input bound_box=63,345,1017,492>Enter current password</input>"
+    }
+  },
+  "start_state": "b08bdbc8bc4964ce77a7c91fbebf6155",
+  "stop_state": "b08bdbc8bc4964ce77a7c91fbebf6155",
+  "event_str": "TouchEvent(state=b08bdbc8bc4964ce77a7c91fbebf6155, view=252e5554f31fb7b86a710cb548df9df0(ChangePasswordActivity/EditText-Enter curr))"
+}

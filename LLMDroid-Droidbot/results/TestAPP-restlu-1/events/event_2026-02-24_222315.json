@@ -1,0 +1,58 @@
+{
+  "tag": "2026-02-24_222315",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": false,
+      "child_count": 1,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [
+        12
+      ],
+      "focused": false,
+      "bounds": [
+        [
+          42,
+          381
+        ],
+        [
+          1038,
+          584
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/cardProfile",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.FrameLayout",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 6,
+      "temp_id": 11,
+      "size": "996*203",
+      "signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardProfile[text]None[enabled,,]",
+      "view_str": "483af7af48e3c53c1b333d079308367b",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.FrameLayout[resource_id]com.test.testapp:id/cardProfile"
+    }
+  },
+  "start_state": "13e85f5a753e90a2fad24c7e9ddb5f4b",
+  "stop_state": "2dc1589ff797913f83fdacbd0d2aba73",
+  "event_str": "TouchEvent(state=13e85f5a753e90a2fad24c7e9ddb5f4b, view=483af7af48e3c53c1b333d079308367b(HomeActivity/FrameLayout-))"
+}

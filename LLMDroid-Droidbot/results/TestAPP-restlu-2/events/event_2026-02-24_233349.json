@@ -1,0 +1,65 @@
+{
+  "tag": "2026-02-24_233349",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "action_type": "CLICK",
+    "logger": "Logger",
+    "_InputEvent__visit_count": 1,
+    "_target": "Widget",
+    "_UIEvent__state": null,
+    "_UIEvent__listener": "ActionListener",
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "com.test.testapp",
+      "visible": true,
+      "checkable": true,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": null,
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          63,
+          1600
+        ],
+        [
+          228,
+          1684
+        ]
+      ],
+      "resource_id": "com.test.testapp:id/rbMale",
+      "checked": true,
+      "text": "Male",
+      "class": "android.widget.RadioButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 20,
+      "temp_id": 21,
+      "size": "165*84",
+      "signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbMale[text]Male[enabled,checked,]",
+      "view_str": "8708dd6512cefb22ece08dda42d47755",
+      "widget": "Widget",
+      "content_free_signature": "[class]android.widget.RadioButton[resource_id]com.test.testapp:id/rbMale",
+      "allowed_actions": [
+        "select",
+        "unselect"
+      ],
+      "special_attrs": [
+        "selected"
+      ],
+      "local_id": "14",
+      "desc": "<checkbox bound_box=63,1600,228,1684>Male</checkbox>"
+    }
+  },
+  "start_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "stop_state": "da8d210f6af61dc87f873b7068ebed7c",
+  "event_str": "TouchEvent(state=da8d210f6af61dc87f873b7068ebed7c, view=8708dd6512cefb22ece08dda42d47755(EditProfileActivity/RadioButton-Male))"
+}
